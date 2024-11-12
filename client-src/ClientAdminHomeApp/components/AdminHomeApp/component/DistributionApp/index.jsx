@@ -7,41 +7,40 @@ const DISTRIBUTION_BUNDLE = [
   {
     label: 'rss',
     url: PUBLIC_URLS.rssFeed(getPublicBaseUrl()),
-    summary: 'Submit this rss link to podcast apps / websites.',
+    summary: '将此 rss 链接提交到播客应用程序/网站。',
     details: (<div className="grid grid-cols-1 gap-4 py-2">
       <div>
-        The schema of this rss feed is following the <a href="https://help.apple.com/itc/podcasts_connect/#/itcb54353390">Apple Podcasts rss spec</a>.
+        此 rss 源的架构遵循 Apple 播客 rss 规范。
       </div>
       <div>
-        You can disable the rss feed in <a href={ADMIN_URLS.settings()}>Settings / Subscribe Methods</a>.
+        您可以在 <a href={ADMIN_URLS.settings()}>设置 / 订阅方法</a>中禁用 rss 源。
       </div>
     </div>),
   },
   {
     label: 'web',
     url: PUBLIC_URLS.webFeed(getPublicBaseUrl()),
-    summary: 'Share this web link to your audience via social media / email.',
+    summary: '通过社交媒体/电子邮件将此网络链接分享给您的观众。',
     details: (<div className="grid grid-cols-1 gap-4 py-2">
       <div>
-        You can customize the styling and add some custom code in <a href={ADMIN_URLS.settings()}>Settings / Custom code</a>.
+        您可以在<a href={ADMIN_URLS.settings()}>设置 / 自定义代码</a>中自定义样式并添加一些自定义代码。
       </div>
       <div>
-        You can disable the entire website in <a href={ADMIN_URLS.settings()}>Settings / Access control</a>.
+        您可以在<a href={ADMIN_URLS.settings()}>设置 / 访问控制</a>中禁用整个网站。
       </div>
     </div>),
   },
   {
     label: 'json',
     url: PUBLIC_URLS.jsonFeed(getPublicBaseUrl()),
-    summary: 'Write code to fetch structured data and set up automation.',
+    summary: '编写代码来获取结构化数据并设置自动化。',
     details: (<div className="grid grid-cols-1 gap-4 py-2">
       <div>
-        The schema of this json feed is following the <a href="https://www.jsonfeed.org/">
-        jsonfeed.org</a> spec. See the OpenAPI spec of microfeed's JSON feed: <a href="/json/openapi.yaml">
-        YAML</a> or <a href="/json/openapi.html">HTML</a>.
+        此 json 源的架构遵循 <a href="https://www.jsonfeed.org/">jsonfeed.org</a> 规范。
+        请参阅microfeed的 JSON 源的 OpenAPI 规范：<a href="/json/openapi.yaml">YAML</a> 或 <a href="/json/openapi.html">HTML</a>。
       </div>
       <div>
-        You can disable the json feed in <a href={ADMIN_URLS.settings()}>Settings / Subscribe methods</a>.
+        您可以在 <a href={ADMIN_URLS.settings()}>设置 / 订阅方法</a>中禁用 json 源。
       </div>
     </div>),
   },
@@ -58,7 +57,7 @@ export default class DistributionApp extends React.Component {
   render() {
     return (<div className="lh-page-card">
       <div className="lh-page-title">
-        Distribution
+        分配
       </div>
       <div className="grid grid-cols-1 gap-8 mt-8">
         {DISTRIBUTION_BUNDLE.map((bundle) => (<div
