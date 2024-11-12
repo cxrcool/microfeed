@@ -16,11 +16,11 @@ const SUBMIT_STATUS__START = 1;
 
 const CODE_TYPE_SELECTOR_OPTIONS = [
   {
-    label: 'Shared html code',
+    label: '共享 html 代码',
     value: CODE_TYPES.SHARED,
   },
   {
-    label: 'Theme: custom',
+    label: '主题：自定义',
     value: CODE_TYPES.THEMES,
     theme: 'custom',
   },
@@ -278,14 +278,14 @@ export default class CustomCodeEditorApp extends React.Component {
         [SETTINGS_CATEGORIES.CUSTOM_CODE]: this.state.feed.settings[SETTINGS_CATEGORIES.CUSTOM_CODE]}})
         .then(() => {
           this.setState({submitStatus: null}, () => {
-            showToast('Updated!', 'success');
+            showToast('更新！', '成功');
           });
         }).catch((error) => {
         this.setState({submitStatus: null}, () => {
           if (!error.response) {
-            showToast('Network error. Please refresh the page and try again.', 'error');
+            showToast('网络错误。请刷新页面并重试。', 'error');
           } else {
-            showToast('Failed. Please try again.', 'error');
+            showToast('失败。请重试。', 'error');
           }
         });
         });
@@ -302,9 +302,9 @@ export default class CustomCodeEditorApp extends React.Component {
 
     const submitting = submitStatus === SUBMIT_STATUS__START;
     return (<AdminNavApp
-      currentPage="settings"
+      currentPage="设置"
       onboardingResult={onboardingResult}
-      upperLevel={{name: 'Settings', url: ADMIN_URLS.settings(), childName: 'Code Editor'}}
+      upperLevel={{name: '设置', url: ADMIN_URLS.settings(), childName: 'Code Editor'}}
       AccessoryComponent={<div className="ml-4">
         <AdminSelect
           value={CODE_TYPE_SELECTOR_OPTIONS_DICT[codeType]}
@@ -344,9 +344,9 @@ export default class CustomCodeEditorApp extends React.Component {
             <div className="lh-page-card mt-4">
               <div className="lh-page-subtitle">Pro-tips:</div>
               <ul className="text-helper-text text-xs">
-                <li className="mb-2">You can use variables from the <a href={PUBLIC_URLS.jsonFeed()}> json feed</a>.</li>
-                <li className="mb-2">The template system is <a href="https://mustache.github.io/">mustache</a>.</li>
-                <li className="mb-2">See the OpenAPI spec for the json feed: <a href={PUBLIC_URLS.jsonFeedOpenApiYaml()}>
+                <li className="mb-2">您可以使用 <a href={PUBLIC_URLS.jsonFeed()}> json源</a> 中的变量 .</li>
+                <li className="mb-2">模板系统是 <a href="https://mustache.github.io/">mustache</a>.</li>
+                <li className="mb-2">请参阅 json 源的 OpenAPI 规范：<a href={PUBLIC_URLS.jsonFeedOpenApiYaml()}>
                   YAML</a> or <a href={PUBLIC_URLS.jsonFeedOpenApiHtml()}>HTML</a>.
                 </li>
               </ul>

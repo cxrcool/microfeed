@@ -111,15 +111,15 @@ export default class EditChannelApp extends React.Component {
         .then((response) => {
           console.log(response);
           this.setState({submitStatus: null, changed: false}, () => {
-            showToast('Updated!', 'success');
+            showToast('更新！', '成功');
           });
         })
         .catch((error) => {
           this.setState({submitStatus: null}, () => {
             if (!error.response) {
-              showToast('Network error. Please refresh the page and try again.', 'error');
+              showToast('网络错误。请刷新页面并重试。', '错误');
             } else {
-              showToast('Failed. Please try again.', 'error');
+              showToast('失败。请重试。', '错误');
             }
           });
         });
@@ -301,7 +301,7 @@ export default class EditChannelApp extends React.Component {
                 onClick={this.onSubmit}
                 disabled={submitting || !changed}
               >
-                {submitting ? 'Updating...' : 'Update'}
+                {submitting ? '更新中...' : '更新'}
               </button>
             </div>
             <AdminSideQuickLinks />

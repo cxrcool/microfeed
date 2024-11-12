@@ -18,65 +18,65 @@ export const CHANNEL_CONTROLS = {
 
 export const CONTROLS_TEXTS_DICT = {
   [CHANNEL_CONTROLS.TITLE]: {
-    linkName: 'Title',
-    modalTitle: 'Channel / Title',
-    text: "A channel's name. <br>" +
-      "If this channel is a podcast, then it would be a podcast name, e.g., The Joe Rogan Experience, The Daily...<br>" +
-      "If this is a blog, then it's the blog site's name, e.g., TechCrunch, Daring Fireball...",
-    rss: '<channel><title>Title Here</title></channel>',
-    json: '{ "title": "Title Here" }',
+    linkName: '标题',
+    modalTitle: '频道 / 标题',
+    text: "频道的名称。<br>" +
+      "如果此频道是播客，那么它将是一个播客名称，例如，The Joe Rogan Experience、The Daily...<br>" +
+      "如果这是一个博客，那么它就是博客网站的名称，例如 TechCrunch、Daring Fireball......",
+    rss: '<channel><title>标题在这里</title></channel>',
+    json: '{ "title": "标题在这里" }',
   },
   [CHANNEL_CONTROLS.IMAGE]: {
-    linkName: 'Channel image',
-    modalTitle: 'Channel / Image',
-    text: "A channel's image.<br>" +
-      "If it's a podcast, then the image must be a minimum size of 1400 x 1400 pixels and a maximum size of 3000 x 3000 pixels, " +
-      "in JPEG or PNG format, 72 dpi, with appropriate file extensions (.jpg, .png), and in the RGB colorspace - " +
-      "this is the requirement of Apple Podcasts.",
+    linkName: '频道图像',
+    modalTitle: '频道 / 图像',
+    text: "频道的图像。<br>" +
+      "如果是播客，则图像的最小大小必须为 1400 x 1400 像素，最大大小为 3000 x 3000 像素。" +
+      "JPEG 或 PNG 格式，72 dpi，具有适当的文件扩展名（.jpg、.png），并且采用 RGB 色彩空间 -" +
+      "这是 Apple Podcasts 的要求。",
     rss: '<channel><itunes:image href="https://cdn-site.com/img.jpg" /><image><url>https://cdn-site.com/img.jpg</url></image></channel>',
     json: '{ "icon": "https://cdn-site.com/img.jpg" }',
   },
   [CHANNEL_CONTROLS.PUBLISHER]: {
-    linkName: 'Publisher',
-    modalTitle: 'Channel / Publisher',
-    text: "A channel's author / publisher. <br>" +
-      "If this channel is a podcast, then it would be the publisher's name, e.g., Gimlet Media, New York Times, Joe Rogan...",
-    rss: '<channel><itunes:author>Publisher Here</itunes:author></channel>',
-    json: '{ "authors": [{"name": "Publisher Here"}] }',
+    linkName: '发布者',
+    modalTitle: '频道 / 发布者',
+    text: "频道的作者/发布者。 <br>" +
+      "如果这个频道是一个播客，那么它就是出版商的名字，例如，Gimlet Media、New York Times、Joe Rogan......",
+    rss: '<channel><itunes:author>在这里发布</itunes:author></channel>',
+    json: '{ "authors": [{"name": "在这里发布"}] }',
   },
   [CHANNEL_CONTROLS.WEBSITE]: {
-    linkName: 'Website',
-    modalTitle: 'Channel / Website',
-    text: "A channel's website. By default, it's the url of this website. " +
-      "But you can set it to fit your use case, e.g., your homepage on your university's website.",
-    rss: '<channel><link>Website Here</link></channel>',
-    json: '{ "home_page_url": "Website Here" }',
+    linkName: '网站',
+    modalTitle: '频道 / 网站',
+    text: "频道的网站。默认情况下，它是此网站的 URL。" +
+      "但您可以设置它以适应您的用例，例如，您大学网站上的主页。",
+    rss: '<channel><link>网站在这里</link></channel>',
+    json: '{ "home_page_url": "网站在这里" }',
   },
   [CHANNEL_CONTROLS.CATEGORIES]: {
-    linkName: 'Categories',
-    modalTitle: 'Channel / Categories',
-    text: "A channel's categories. All available categories are from <a href='https://podcasters.apple.com/support/1691-apple-podcasts-categories'>Apple Podcasts</a>.<br>" +
-      "If this is a podcast, although you can specify more than one category, Apple Podcasts only recognizes the first category and subcategory.",
+    linkName: '类别',
+    modalTitle: '频道 / 类别',
+    text: "频道的类别。所有可用类别均来自 <a href='https://podcasters.apple.com/support/1691-apple-podcasts-categories'>Apple Podcasts</a>。<br>" +
+      "如果这是一个播客，尽管您可以指定多个类别，但 Apple 播客只能识别第一个类别和子类别。",
     rss: '<channel><itunes:category text="Arts" /></channel>',
     json: '{ "_microfeed": {"categories": [{"name": "Arts"}]} }',
   },
   [CHANNEL_CONTROLS.LANGUAGE]: {
-    linkName: 'Language',
-    modalTitle: 'Channel / Language',
-    text: "A channel's language.<br>The primary language for the feed in the format specified in RFC 5646. " +
-      "The value is usually a 2-letter language tag from ISO 639-1, optionally followed by a region tag. " +
-      "(Examples: en or en-US.)",
+    linkName: '语言',
+    modalTitle: '频道 / 语言',
+    text: "频道的语言。<br>采用 RFC 5646 中指定的格式的 Feed 的主要语言。" +
+      "该值通常是 ISO 639-1 中的 2 个字母的语言标记，后跟一个区域标记（可选）。 " +
+      "（示例：en 或 en-US）。",
     rss: '<channel><language>en-us</language></channel>',
     json: '{ "language": "en-us" }',
   },
   [CHANNEL_CONTROLS.DESCRIPTION]: {
-    linkName: 'Description',
-    modalTitle: 'Channel / Description',
-    text: "A channel's description.<br>" +
-      "If this channel is a podcast, the maximum amount of text allowed for the description is 4000 characters - this is a requirement of Apple Podcasts.<br>" +
-      "If this is a blog, then you can write as many words as you want for the description.",
-    rss: '<channel><description><![CDATA[ <p>some html here</p> ]]></description></channel>',
-    json: '{ "description": "<p>some html here</p>" }',
+    linkName: '描述',
+    modalTitle: '频道 / 描述',
+    text: "频道的描述。<br>" +
+      "如果此频道是播客，则描述允许的最大文本量为 4000 个字符 - 这是 Apple 播客的要求。<br>" +
+      "如果这是一个博客，那么您可以写任意数量的单词作为描述。",
+    rss: '<channel><description><![CDATA[ <p>这里有一些 HTML</p> ]]></description></channel>',
+    json: '{ "description": "<p>这里有一些 HTML</p>" }',
   },
   [CHANNEL_CONTROLS.ITUNES_TYPE]: {
     linkName: '<itunes:type>',
@@ -84,25 +84,25 @@ export const CONTROLS_TEXTS_DICT = {
     text: "The type of show.<br>" +
       "If your show is Serial you must use this tag.<br>" +
       "Its values can be one of the following:<br>" +
-      "<b>Episodic</b> (default). Specify episodic when episodes are intended to be consumed without any specific order. Apple Podcasts will present newest episodes first and display the publish date (required) of each episode. If organized into seasons, the newest season will be presented first - otherwise, episodes will be grouped by year published, newest first.<br>" +
-      "For new subscribers, Apple Podcasts adds the newest, most recent episode in their Library.<br>" +
-      "<b>Serial</b>. Specify serial when episodes are intended to be consumed in sequential order. Apple Podcasts will present the oldest episodes first and display the episode numbers (required) of each episode. If organized into seasons, the newest season will be presented first and itunes:episode numbers must be given for each episode.",
+      "<b>Episodic</b> （默认）指定剧集（不按顺序使用剧集时）。Apple 播客将首先显示最新的单集，并显示每集的发布日期（必填）。如果按季节组织，则首先显示最新的季节 - 否则，将按发布的年份对剧集进行分组，最新的在前。<br>" +
+      "对于新订阅者，Apple 播客会在其资料库中添加最新的单集。<br>" +
+      "<b>Serial</b>. 指定 serial （按顺序使用剧集时）。Apple 播客将首先显示最早的单集，并显示每集的单集编号（必填）。如果按季节组织，将首先显示最新的季节，并且必须为每个集提供 itunes：episode 编号。",
     rss: '<channel><itunes:type>episodic</itunes:type></channel>',
     json: '{ "_microfeed": {"itunes:type": "episodic"} }',
   },
   [CHANNEL_CONTROLS.ITUNES_EMAIL]: {
     linkName: '<itunes:email>',
     modalTitle: 'Channel / <itunes:email>',
-    text: "The podcast owner's contact email. It'll be public in the rss feed. Many podcast platforms require this email to validate your podcast ownership.",
+    text: "播客所有者的联系电子邮件。它将在 rss 源中公开。许多播客平台需要此电子邮件来验证您的播客所有权。",
     rss: '<channel><itunes:owner><itunes:email>myname@mycompany.com</itunes:email></itunes:owner></channel>',
     json: '{ "_microfeed": {"itunes:email": "myname@mycompany.com"} }',
   },
   [CHANNEL_CONTROLS.COPYRIGHT]: {
-    linkName: 'Copyright',
-    modalTitle: 'Channel / Copyright',
-    text: "The show copyright details.<br>" +
-      "If your show is copyrighted you should use this tag. For example:<br>" +
-      "<em>Copyright 1995-2019 John John Appleseed</em>",
+    linkName: '版权',
+    modalTitle: '频道 / 版权',
+    text: "显示版权详细信息。<br>" +
+      "如果您的节目受版权保护，您应该使用此标签。例如：<br>" +
+      "<em>版权所有 1995-2019 John John Appleseed</em>",
     rss: '<channel><copyright>©2023</copyright></channel>',
     json: '{ "_microfeed": {"itunes:type": "©2023"} }',
   },
